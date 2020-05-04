@@ -1,0 +1,42 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "tests-js",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./src/index.js",
+    "test": "node_modules/.bin/ava --verbose"
+  },
+  "scripts-info": {},
+  "engines": {
+    "node": ">=12"
+  },
+  "author": "Paul Chiritescu",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^3.5.1",
+    "nyc": "^15.0.0"
+  },
+  "ava": {
+    "failFast": true,
+    "files": [
+      "**/*.spec.js"
+    ],
+    "ignoredByWatcher": [
+      "**/*.js"
+    ],
+    "serial": true,
+    "timeout": "2s"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "node-qunit": "^1.0.0",
+    "qunit-parameterize": "^0.4.0",
+    "underscore": "^1.9.2"
+  }
+}
